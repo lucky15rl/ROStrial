@@ -8,8 +8,11 @@
       value="$(file-content $(var urdf_file))" type="str" />
   </node>
 
- <node pkg="rviz2" exec="rviz2"
-  args="-d $(find-pkg-share athens_description)/config/config.rviz"/>
-<node pkg="tf2_ros" exec="static_transform_publisher"
-  args="0 0 0 0 0 0 world base_link"/>
+  <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui"/>
+
+  <node pkg="rviz2" exec="rviz2"
+    args="-d $(find-pkg-share athens_description)/config/config.rviz"/>
+
+  <node pkg="tf2_ros" exec="static_transform_publisher"
+    args="0.1 0 0.1 0 0 0 gripper_base_link tool_frame"/>
 </launch>
