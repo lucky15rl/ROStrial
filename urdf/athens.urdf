@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="athens">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder radius="1" length="5"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
